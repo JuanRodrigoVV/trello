@@ -1,9 +1,11 @@
 'use client'
 
 import { useBoardStore } from '@/store/BoardStore';
+import { Column } from '@/typings';
 import React, {useEffect} from 'react'
 import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd';
-import Column from './Column';
+import Column2 from './Column';
+// import Column from './Column';
 
 
 export default function Board() {
@@ -109,7 +111,7 @@ export default function Board() {
          ref={provided.innerRef}
         > {
           Array.from(board.columns.entries()).map(([id, column], index) => (
-          <Column
+          <Column2
             key={id}
             id={id}
             todos={column.todos}

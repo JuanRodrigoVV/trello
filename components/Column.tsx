@@ -20,7 +20,7 @@ const idToColumnText: {
     done : "Done"
 }
 
-export default function Column({id, todos, index}: Props) {
+export default function Column2({id, todos, index}: Props) {
 
   const [searchString, setNewTaskType] = useBoardStore((state) => [state.searchString, state.setNewTaskType]);
   const openModal = useModalStore((state) => state.openModal);
