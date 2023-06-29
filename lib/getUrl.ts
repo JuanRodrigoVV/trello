@@ -1,6 +1,6 @@
 import { storage } from "@/appwrite";
 
-const getUrl = async (image: Image) => {
+const getUrl = async (image: any) => {
   const { bucketId, fileId } = JSON.parse(image);
   const url = await storage.getFilePreview(bucketId, fileId);
   
