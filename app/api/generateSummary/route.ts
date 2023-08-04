@@ -14,10 +14,11 @@ export async function POST(request: Request) {
        stream: false,
        messages: [
         {role: 'system',
-        content: "Cuando respondes, da la bienvenida al usuario suponiendo que siempre es del equipo boca juniors, con algun mensaje como, aguante boquita carajo."
+        content: "Welcome the user with a positive message."
         },
         {role: 'user',
-        content: `Proveer un resumen de la siguiente lista de todos. Cuantos hay, cuantos hay que terminar, cuantos estan en progreso. Luego saluda al usuario como buen hincha de boca juniors, con un vamos boquita. Here is the data ${JSON.stringify(
+        content: `
+        Provide a summary of the following list of all. How many are there, how many need to be finished, how many are in progress. Then greet the user. Here are the tasks ${JSON.stringify(
             todos
         )}`
         },
